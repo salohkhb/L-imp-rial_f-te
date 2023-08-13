@@ -1,0 +1,366 @@
+<!doctype html>
+{% load static %}
+<!DOCTYPE html>
+<!-- === Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="{% static 'css/css.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+    <style>
+        button{
+            margin-top: 10px;
+        }
+        .header{
+            display: flex;
+            margin-left: 30px;
+            position: fixed;
+
+        }
+        .homescreen{
+            width: 1920px ;
+        }
+        .nav-links {
+            display: flex;
+            color: darkgoldenrod;
+            list-style: none;
+            padding: 0;
+            transform: skew(-45deg); /* Counter-skew for the list container */
+            margin-left: 50px;
+            margin-top: 20px;
+        }
+
+        .img {
+            margin-top: -60px;
+            
+            margin-left: 100px ;
+            height: 200px ;
+            width: auto ; 
+            transform: skew(-45deg)                       
+        }
+
+        .img2 {
+            margin-top: 20px;
+            
+            margin-left: 100px ;
+            height: 40px ;
+            width: auto ; 
+                                   
+        }
+
+        .img3 {
+            margin-top: 20px;
+            
+            
+            height: 40px ;
+            width: auto ; 
+                                   
+        }
+
+        .outer-container {
+            display: inline-block;
+        }
+
+        .rhombic-border {
+            width: 800px;
+            height: 80px;
+            display: inline-flex;
+            background-color: #000000;
+            position: relative;
+            transform: skew(45deg);
+            overflow: hidden;
+            margin: 0 auto;
+            margin-top: 10px;
+            margin-left: 25px;
+
+            
+        }
+
+        .rhombic-border::before,
+        .rhombic-border::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: 15px solid transparent;
+        }
+
+        .rhombic-border::before {
+            top: -30px;
+            left: 0;
+            border-bottom-color: #333;
+            transform: rotate(45deg);
+        }
+
+        .rhombic-border::after {
+            bottom: -30px;
+            right: 0;
+            border-top-color: #333;
+            transform: rotate(45deg);
+        }
+
+        .content-container {
+            transform: skew(45deg);
+            width: 100%;
+            height: 100%;
+            margin-left: 90px;
+        }
+
+        .nav-links li {
+            transform: skew(45deg); /* Re-apply skew to list items */
+            margin: 0 10px; /* Adjust margin as needed */
+            transform: skew(45deg); /* Apply skew to the list items */
+        }
+        
+        .nav-links h3 {
+            transform: skew(-45deg); /* Un-skew text */
+            margin: 0;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-family: 'Lobster'
+        }
+        .parking{
+            margin-left: 400px;
+        }
+        .stats1{
+            display: flex;
+            font-size: x-large;
+            color: rgb(115, 101, 18) ;
+            margin-left: 300px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .mb-5{
+            font-family: 'Lobster';
+            font-size:xx-large ;
+            color: rgb(187, 164, 36);
+            margin-left: 40%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        a{
+            font-family: 'Lobster'
+        }
+        .h2{
+            font-family: 'Lobster';
+            font-size: large;
+            color: aliceblue;
+            
+        }
+        h2{
+            font-family: 'Lobster';
+        }
+        .p{
+            font-family: 'Lobster';
+            font-size: large;
+            color: aliceblue;
+        }
+
+        p{
+            font-family: 'Lobster'
+        }
+        h3{
+            font-family: 'Lobster';
+            color:darkgoldenrod
+        }
+        h1{
+            font-family: 'Lobster'
+        }
+        .homescreen{
+            margin-top: -40px;
+        }
+        .about-section {
+            position: relative;
+            height: 500px; /* Set the desired height */
+            overflow: hidden;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://scontent.fczl1-2.fna.fbcdn.net/v/t39.30808-6/335678757_958901858803605_6520877165390916050_n.jpg?_nc_cat=110&cb=99be929b-59f725be&ccb=1-7&_nc_sid=7f8c78&_nc_eui2=AeFd6K9sxi4ahzEqUcTsOPTepmo3dYuA_82majd1i4D_zeNNXzEdSJHlZv3xNfVEFrCdQcAIxbM6G-2oE1ON2wHa&_nc_ohc=x9X_kbECKMoAX_-pIex&_nc_zt=23&_nc_ht=scontent.fczl1-2.fna&oh=00_AfDpL73o9X2EcJV2kbfHk1K8lfG8X35bqlbBpXORh7Qrag&oe=64DD9768'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.5; /* Adjust the opacity as needed */
+            z-index: -1; /* Place the background behind the content */
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .about-h1{
+            margin-top: 30px;
+            font-family: 'Lobster';
+            font-size: xx-large;
+            color:black
+        }
+        .about-p{
+            font-family: 'Lobster';
+            font-size: x-large;
+            color:black
+        }
+        .home-section {
+            position: relative;
+            height: 500px; /* Set the desired height */
+            overflow: hidden;
+        }
+
+        .home-background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://scontent.fczl1-2.fna.fbcdn.net/v/t39.30808-6/347226998_640713170819298_6686578247179408479_n.jpg?_nc_cat=106&cb=99be929b-59f725be&ccb=1-7&_nc_sid=7f8c78&_nc_eui2=AeEZXN-Rzt0SV0Yqy_fsHG7gM7hLRKmlbb4zuEtEqaVtvuF_y9vruNAE2tZWm_1jXsuMS6kUdtR1CZ_w8zTFUb4K&_nc_ohc=J5nkb_pV7QYAX8O_6_R&_nc_zt=23&_nc_ht=scontent.fczl1-2.fna&oh=00_AfBdupjwvf6vOmXOWRwOM-O9HsQTm8FMMN7aVunico6dXA&oe=64DC582C'); /* Path to your background image */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.5; /* Adjust the opacity as needed */
+            z-index: -1; /* Place the background behind the content */
+        }
+
+        .home-content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+    </style>  
+    
+
+    <title>L'impérial</title>
+</head>
+<body>
+
+    
+    
+    <div class="outer-container">
+        <div class="header">
+            <img class="img2" src="{% static 'images/x.png' %}">
+            <div class="rhombic-border">
+                <img class="img" src="{% static 'images/2023-05-12.png' %}">
+                <ul class="nav-links">
+                    
+                    <li><a href="#home-section"><h3>home</h3></a></li>
+                    <li><a href="#stats"><h3>about</h3></a></li>
+                    <li><a href="#spots"><h3>where</h3></a></li> 
+                    <li><a href="#footer"><h3>contact</h3></a></li>   
+                </ul>
+            </div>
+            <img class="img3" src="{% static 'images/xx.png' %}">
+        </div>    
+    </div>
+    
+    <section class="home-section" id="home-section">
+        <div class="home-background-image">
+            <div class="home-content">
+                <img src="{% static 'images/logo.png' %}">
+            </div>
+        </div>
+        
+    </section>
+
+    
+
+    <section class="stats" id="stats">
+        
+            
+        <div class="stats1">
+            <div class="capacité">
+                <h2>capacité de</h3>
+                    <h2>  +1000</h3>
+                <h2>personnes</h2>
+            </div>
+            <div class="parking">
+                <h2>parking de</h3>
+                    <h2>  +50</h3>
+                <h2>voiturs</h2>
+            </div>
+        </div>   
+
+    </section>
+    <section class="about-section">
+        <div class="background-image">
+            <div class="content">
+                <h1 class="about-h1">About Us</h1>
+                <p class="about-p">Doté d'une grande capacité d'accueil, la Salle Impérial est prête pour vous accueillir.
+                    N'hésitez pas à nous contacter pour toute information ou demande de réservation.</p>
+                
+            </div>
+        </div>
+        
+    </section>
+
+
+
+    
+
+    <!-- our spots sections start here -->
+    <section class="spots" id="spots">            
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12 col-12 text-center">
+                    <h2 class="mb-5">Get in touch</h2>
+                </div>
+
+                <div class="col-lg-5 col-12 mb-4 mb-lg-0">
+                    <a href="https://www.google.com/maps/place/L'imp%C3%A9rial/@36.257309,6.63083,18.26z/data=!4m6!3m5!1s0x12f171d5324787f5:0xe1966072ad864555!8m2!3d36.2572424!4d6.6306026!16s%2Fg%2F11rgrvnqzt?hl=en&entry=ttu"><img class="google-map" src="{% static 'images/map.PNG' %}"></img></a>
+                </div>
+            </div>
+        </div>        
+    </section>
+
+    
+    <div  id="footer">
+        <div class="footer">
+            <span class="footer-Logo"><a href="#"><img class="footerlogo" src="{% static 'images/logo.png' %}" alt=""></a></span>
+            <div class="div1">
+                <h2 class="h2">
+                    numéro de téléphone
+                </h2>
+                <br>
+                <p class="p">
+                    +21552105066
+                </p>
+            </div>
+            <div class="div2">
+                <ul>
+                    <li>
+                        <span class="span1"><img class="social" src="{% static 'images/Instagram_logo_2022.svg.png' %}" alt=""> <a href="https://www.instagram.com/imperial_fete/"><h2 class="h2">@imperial_fete</h2></a></span>
+                    </li>
+                    <br>
+                    <li>
+                        <span class="span2"><img class="social" src="{% static 'images/Facebook_f_logo_(2021).svg.png' %}" alt=""> <a href="https://www.facebook.com/profile.php?id=100089577707231"><h2 class="h2">imperial_fete</h2></a></span>
+                    </li>
+                    <br>
+                    <li>
+                        <span class="span3"><img class="social" src="{% static 'images/download.png' %}" alt="">  <a><h2 class="h2">impériale@gmail.com</h2></a></span>
+                    </li>
+                </ul>
+            </div>
+             <div style="color: darkgoldenrod; margin-left:-500px;margin-bottom: -200px;">
+                <p>©2023 SIRIUS thech| All right reserved</p>
+            </div>
+        </div> 
+             
+    </div>
+
+    
+
+ 
+
+    <script src="{%static 'js/script.js'%}"></script>
+    <!-- <script src="{%static 'js/animation-code/vanilla-tilt.js'%}"></script> -->
+
+</body>
+</html>
