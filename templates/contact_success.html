@@ -182,7 +182,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url(); /* Replace with your image path */
+            background-image: url('https://scontent.fczl1-2.fna.fbcdn.net/v/t39.30808-6/335678757_958901858803605_6520877165390916050_n.jpg?_nc_cat=110&cb=99be929b-59f725be&ccb=1-7&_nc_sid=7f8c78&_nc_eui2=AeFd6K9sxi4ahzEqUcTsOPTepmo3dYuA_82majd1i4D_zeNNXzEdSJHlZv3xNfVEFrCdQcAIxbM6G-2oE1ON2wHa&_nc_ohc=x9X_kbECKMoAX_-pIex&_nc_zt=23&_nc_ht=scontent.fczl1-2.fna&oh=00_AfDpL73o9X2EcJV2kbfHk1K8lfG8X35bqlbBpXORh7Qrag&oe=64DD9768'); /* Replace with your image path */
             background-size: cover;
             background-position: center;
             opacity: 0.5; /* Adjust the opacity as needed */
@@ -250,7 +250,7 @@
                 <img class="img" src="{% static 'images/2023-05-12.png' %}">
                 <ul class="nav-links">
                     
-                    <li><a href="#home-section"><h3>home</h3></a></li>
+                    <li><a href="{% url 'home' %}"><h3>home</h3></a></li>
                     <li><a href="#stats"><h3>about</h3></a></li>
                     <li><a href="#spots"><h3>where</h3></a></li> 
                     <li><a href="#footer"><h3>contact</h3></a></li>   
@@ -260,76 +260,12 @@
         </div>    
     </div>
     
-    <section class="home-section" id="home-section">
-        <div class="home-background-image">
-            <div class="home-content">
-                <img src="{% static 'images/logo1.png' %}">
-            </div>
-        </div>
-        
-    </section>
+    <p>Thank you for contacting us! We will get back to you soon.</p>
 
     
-
-    <section class="stats" id="stats">
-        
-            
-        <div class="stats1">
-            <div class="capacité">
-                <h2>capacité de</h3>
-                    <h2>  +1000</h3>
-                <h2>personnes</h2>
-            </div>
-            <div class="parking">
-                <h2>parking de</h3>
-                    <h2>  +50</h3>
-                <h2>voiturs</h2>
-            </div>
-        </div>   
-
-    </section>
-    <section class="about-section">
-        <div class="background-image">
-            <div class="content">
-                <h1 class="about-h1">About Us</h1>
-                <p class="about-p">Doté d'une grande capacité d'accueil, la Salle Impérial est prête pour vous accueillir.
-                    N'hésitez pas à nous contacter pour toute information ou demande de réservation.</p>
-                
-            </div>
-        </div>
-        
-    </section>
-
-
-
-    
-
-    <!-- our spots sections start here -->
-    <section class="spots" id="spots">            
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-12 col-12 text-center">
-                    <h2 class="mb-5">Get in touch</h2>
-                </div>
-
-                <div class="col-lg-5 col-12 mb-4 mb-lg-0">
-                    <a href="https://www.google.com/maps/place/L'imp%C3%A9rial/@36.257309,6.63083,18.26z/data=!4m6!3m5!1s0x12f171d5324787f5:0xe1966072ad864555!8m2!3d36.2572424!4d6.6306026!16s%2Fg%2F11rgrvnqzt?hl=en&entry=ttu"><img class="google-map" src="{% static 'images/map.PNG' %}"></img></a>
-                </div>
-            </div>
-        </div>        
-    </section>
-
-    <div>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Submit</button>
-        </form>
-    </div>
     <div  id="footer">
         <div class="footer">
-            <span class="footer-Logo"><a href="#"><img class="footerlogo" src="{% static 'images/logo1.png' %}" alt=""></a></span>
+            <span class="footer-Logo"><a href="#"><img class="footerlogo" src="{% static 'images/logo.png' %}" alt=""></a></span>
             <div class="div1">
                 <h2 class="h2">
                     numéro de téléphone
