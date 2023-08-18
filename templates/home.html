@@ -8,7 +8,43 @@
     
     <link rel="stylesheet" href="{% static 'css/css.css' %}">
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+    
     <style>
+        .www{
+            box-sizing: border-box;
+            width: 40%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+            margin-bottom: 20px;
+            margin-left: 400px;
+
+        }
+        .ww{
+            box-sizing: border-box;
+            width: 40%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+            margin-bottom: 20px;
+            margin-left: 400px;
+
+        }
+
+        .w{
+            box-sizing: border-box;
+            width: 40%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+            margin-bottom: 20px;
+            margin-left: 400px;
+        }
+
+
         button{
             margin-top: 10px;
         }
@@ -136,11 +172,13 @@
             font-size:xx-large ;
             color: rgb(187, 164, 36);
             margin-left: 40%;
-            margin-top: 5%;
+            margin-top: 50px;
             margin-bottom: 5%;
         }
         a{
-            font-family: 'Lobster'
+            font-family: 'Lobster';
+            text-decoration-line:none;
+
         }
         .h2{
             font-family: 'Lobster';
@@ -172,7 +210,7 @@
         }
         .about-section {
             position: relative;
-            height: 500px; /* Set the desired height */
+            height: 1000px; /* Set the desired height */
             overflow: hidden;
         }
 
@@ -182,17 +220,18 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url(); /* Replace with your image path */
-            background-size: cover;
+            background-image: url(); 
+             background-size: cover;
             background-position: center;
-            opacity: 0.5; /* Adjust the opacity as needed */
-            z-index: -1; /* Place the background behind the content */
+            opacity: 0.5; 
+            z-index: -1;  
+            
         }
 
         .content {
             position: relative;
             z-index: 1;
-            padding: 20px;
+            
             text-align: center;
             color: white;
         }
@@ -200,12 +239,13 @@
             margin-top: 30px;
             font-family: 'Lobster';
             font-size: xx-large;
-            color:black
+            color:white ;
+            margin-bottom: 20px;
         }
         .about-p{
             font-family: 'Lobster';
             font-size: x-large;
-            color:black
+            color:white
         }
         .home-section {
             position: relative;
@@ -219,21 +259,84 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('https://scontent.fczl1-2.fna.fbcdn.net/v/t39.30808-6/347226998_640713170819298_6686578247179408479_n.jpg?_nc_cat=106&cb=99be929b-59f725be&ccb=1-7&_nc_sid=7f8c78&_nc_eui2=AeEZXN-Rzt0SV0Yqy_fsHG7gM7hLRKmlbb4zuEtEqaVtvuF_y9vruNAE2tZWm_1jXsuMS6kUdtR1CZ_w8zTFUb4K&_nc_ohc=J5nkb_pV7QYAX8O_6_R&_nc_zt=23&_nc_ht=scontent.fczl1-2.fna&oh=00_AfBdupjwvf6vOmXOWRwOM-O9HsQTm8FMMN7aVunico6dXA&oe=64DC582C'); /* Path to your background image */
+            background-image: url('https://scontent.fczl1-2.fna.fbcdn.net/v/t39.30808-6/347226998_640713170819298_6686578247179408479_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeEZXN-Rzt0SV0Yqy_fsHG7gM7hLRKmlbb4zuEtEqaVtvuF_y9vruNAE2tZWm_1jXsuMS6kUdtR1CZ_w8zTFUb4K&_nc_ohc=l1Aa0a6vuP8AX9E6eZr&_nc_zt=23&_nc_ht=scontent.fczl1-2.fna&oh=00_AfCrFOoW7PMTlN7feIX4xkyYlgqMDMq8sArTzf8MT1Ny3A&oe=64E4412C');
             background-size: cover;
             background-position: center;
-            opacity: 0.5; /* Adjust the opacity as needed */
-            z-index: -1; /* Place the background behind the content */
-        }
+            z-index: -1; 
+            /* margin-top: 30px; */
+            
+        } 
 
         .home-content {
             position: relative;
-            z-index: 1;
+            width: 100%;
             padding: 20px;
             text-align: center;
-            color: white;
+            
+        }
+        .map-img{
+            margin-left: 100px ;
+            width: 800px;
+
         }
 
+        button{
+            background-color:black ; /* Green */
+            border: none;
+            color:darkgoldenrod;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 12px;
+            
+        }
+
+        h4{
+            font-family: lobster;
+            font-size: larger;
+            margin-left: 300px;
+        }
+
+        .contactus{
+            margin-left: 800px;
+            margin-bottom: 10px;
+        }
+
+        
+
+        .dd{
+
+            margin-left: 400px;
+        }
+
+
+        .s1{
+            border:darkgoldenrod  ;
+            
+        }
+
+
+        .div3{
+            list-style-type: none;
+            margin-left: 0px;            
+
+        }
+
+        li{
+            margin-bottom: 10px;
+        }
+
+        .fac{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+
+        .xxxx{
+            margin-bottom: 20px;
+        }
     </style>  
     
 
@@ -250,10 +353,10 @@
                 <img class="img" src="{% static 'images/2023-05-12.png' %}">
                 <ul class="nav-links">
                     
-                    <li><a href="#home-section"><h3>home</h3></a></li>
-                    <li><a href="#stats"><h3>about</h3></a></li>
-                    <li><a href="#spots"><h3>where</h3></a></li> 
-                    <li><a href="#footer"><h3>contact</h3></a></li>   
+                    <li><a href="#home-section"><h3>Home</h3></a></li>
+                    <li><a href="#stats"><h3>About</h3></a></li>
+                    <li><a href="#spots"><h3>Where</h3></a></li> 
+                    <li><a href="#footer"><h3>Contact</h3></a></li>   
                 </ul>
             </div>
             <img class="img3" src="{% static 'images/xx.png' %}">
@@ -263,7 +366,7 @@
     <section class="home-section" id="home-section">
         <div class="home-background-image">
             <div class="home-content">
-                <img src="{% static 'images/logo1.png' %}">
+                <img src="{% static 'images/logo2.png' %}">
             </div>
         </div>
         
@@ -276,13 +379,13 @@
             
         <div class="stats1">
             <div class="capacité">
-                <h2>capacité de</h3>
-                    <h2>  +1000</h3>
-                <h2>personnes</h2>
-            </div>
+                <h2>Trés grande</h3>
+                    <h2>capacité</h3>
+                <h2>de réception</h2>
+            </div> 
             <div class="parking">
                 <h2>parking de</h3>
-                    <h2>  +50</h3>
+                    <h2>  +100</h3>
                 <h2>voiturs</h2>
             </div>
         </div>   
@@ -291,9 +394,22 @@
     <section class="about-section">
         <div class="background-image">
             <div class="content">
-                <h1 class="about-h1">About Us</h1>
-                <p class="about-p">Doté d'une grande capacité d'accueil, la Salle Impérial est prête pour vous accueillir.
-                    N'hésitez pas à nous contacter pour toute information ou demande de réservation.</p>
+                <h1 class="about-h1">Qui sommes nous?</h1>                
+                <hr>
+                
+                    <h1 class="fac">Facilement accessible</h1>  
+                    <ul class="div3">
+                        <li class="ez1" ><span><p class="about-p">Aéroport de Constantine Mohamed Boudiaf : </p> <h3>10 km</h3></span></li>
+                        <li><p class="about-p">Accès autoroute Est-Ouest (A1) : </p> <h3> 8 km</h3></li>
+                        <li><p class="about-p">Station Tramway Kadri Ibrahim : </p> <h3> 4 km</h3></li>
+                        <li><p class="about-p">Nouvelle ville Ali Mendjeli : </p> <h3> 5 km</h3></li>
+                        <li><p class="about-p">El khroub : </p> <h3> 8,5 km</h3></li>
+                        <li><p class="about-p">Constantine ville : </p> <h3> 17 km</h3></li>
+                    </ul>
+                <h1 class="about-h1">Qui sommes nous?</h1>   
+                <div  class="xxxx"> <p class="about-p">L’Impérial est un Restaurant au cadre chaleureux,</p> <p class="about-p">grâce notamment à un décor sobre et cosy.</p> <p class="about-p">Il conviendra aussi bien au déjeuner de travail,</p> <p class="about-p"> à un déjeuner rapide ou à un vrai moment de partage autour d’une bonne table.</p> <p class="about-p"> Le cadre moderne vous permettra de passer un agréable moment.</p> <p class="about-p"> Le service professionnel et discret saura s’adapter à la clientèle et ce dans une atmosphère conviviale. </p> <p class="about-p"> Si la carte se veut traditionnelle et soignée, le chef vous propose de nombreuses suggestions de menus qui ne cesseront de vous surprendre. </p> <p class="about-p"> L’équipe de direction est à votre entière disposition pour toute demande particulière (déjeuner d’affaire, groupe, diné, événements…)</p></div>
+                <hr>
+
                 
             </div>
         </div>
@@ -314,22 +430,25 @@
                 </div>
 
                 <div class="col-lg-5 col-12 mb-4 mb-lg-0">
-                    <a href="https://www.google.com/maps/place/L'imp%C3%A9rial/@36.257309,6.63083,18.26z/data=!4m6!3m5!1s0x12f171d5324787f5:0xe1966072ad864555!8m2!3d36.2572424!4d6.6306026!16s%2Fg%2F11rgrvnqzt?hl=en&entry=ttu"><img class="google-map" src="{% static 'images/map.PNG' %}"></img></a>
+                    <iframe class="map-img" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1608.6332369928673!2d6.63083!3d36.257309!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12f171d5324787f5%3A0xe1966072ad864555!2sL&#39;imp%C3%A9rial!5e0!3m2!1sen!2sdz!4v1692123377695!5m2!1sen!2sdz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>        
     </section>
 
-    <div>
-        <form method="post">
+    <div class="s1" >
+        <h1 class="dd">contact us</h1>
+        <form action="{% url 'contact' %}" method="post">
             {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Submit</button>
+            <h4>Votre nom :</h4> <input class="form-control www" type="text" name="message_name">
+            <h4>Votre email :</h4> <input class="form-control ww" type="text" name="message_email">
+            <h4>Votre message :</h4> <textarea class="form-control w" name="message"></textarea>
+            <button class="contactus" type="submit">Submit</button>
         </form>
     </div>
     <div  id="footer">
         <div class="footer">
-            <span class="footer-Logo"><a href="#"><img class="footerlogo" src="{% static 'images/logo1.png' %}" alt=""></a></span>
+            <span class="footer-Logo"><a href="#"><img class="footerlogo" src="{% static 'images/logo1 - Copy.png' %}" alt=""></a></span>
             <div class="div1">
                 <h2 class="h2">
                     numéro de téléphone

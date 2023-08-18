@@ -9,15 +9,22 @@ def home(request):
 
 def contact_us(request):
     if request.method == 'POST':
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            form.save()
-            send_contact_email(form.cleaned_data)
-            return redirect('contact_success')
+        message_name = request.POST['message_name']
+        message_email = request.POST['message_email']
+        message = request.POST['message']
+
+        send_mail(
+            message_name,
+            message,
+            message_email,
+            ["impérial@gmail.com"],
+        )
+
+        return render(request, 'home.html', {'message_name': message_name , 'message_email' : message_email , 'message' : message})
     else:
-        form = ContactForm()
+        
     
-    return render(request, 'home.html', {'form': form})
+     return render(request, 'home.html', {'form': form})
 
 def send_contact_email(data):
     subject = 'New Contact Message'
