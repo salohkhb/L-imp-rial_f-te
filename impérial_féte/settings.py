@@ -149,4 +149,4 @@ STATICFILES_STORAGE = 'whtenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 
-django_heroku.settings(locals())
+django_heroku.settings(locals() , logging=False)
